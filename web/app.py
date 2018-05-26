@@ -28,7 +28,7 @@ def handle_upload():
    file_to_be_uploaded=my_file
   )
 
-  return OK
+  return "OK"
 
 
 if __name__ == '__main__':
