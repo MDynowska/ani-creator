@@ -27,7 +27,7 @@ def handle_upload():
    path="ab/bc/photo",
    file_to_be_uploaded=my_file
   )
-
+  
   return "OK"
 
 
