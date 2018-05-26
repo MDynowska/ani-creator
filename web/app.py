@@ -16,15 +16,17 @@ def order_animation():
   )
 
 
-@app.route("/upload", methods=['POST'])
+@app.route("/upload", methods=["POST"])
 def handle_upload():
-    if 'my_file' not in request.files:
-        return "something is not yes!!!"
-    my_file = requests.files['my_file']
-    storage.save(
-        path="ab/bc/photo",
-        file_to_be_uploaded=my_file
-    )
-    
+  if 'my_file' not in request.files:
+    return "something is not yes!!!"
+  my_file = request.files['my_file']
+  storage.save(
+   path="ab/bc/photo",
+   file_to_be_uploaded=my_file
+  )
+
+  return OK
+
 if __name__ == '__main__':
   app.run(host="0.0.0.0", port=8080, debug=True)
